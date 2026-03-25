@@ -34,6 +34,27 @@ This project served as a rigorous exercise in hardware efficiency and adaptive e
 
 ---
 
+## 🔍 Technical Evidence & Audit
+The following evidence verifies the successful implementation of the 5-layer "Security Onion."
+
+### [01] Network Socket Binding
+![Socket Audit](./screenshots/socket_audit.png)
+*Audit of internal socket binding, confirming the inference engine is not exposed to public NICs.*
+
+### [02] Firewall Perimeter Configuration
+![UFW Status](./screenshots/ufw_status.png)
+*Evidence of interface-specific ingress filtering via UFW, restricting access to the P2P tunnel.*
+
+### [03] Intrusion Prevention (Fail2Ban)
+![Fail2Ban Status](./screenshots/fail2ban_status.png)
+*Active monitoring of the SSH jail, verifying automated brute-force mitigation.*
+
+### [04] Verified Secure Access
+![Web UI Success](./screenshots/webui.png)
+*Successful end-to-end model inference accessed via the private network gateway.*
+
+---
+
 ## 🧠 Strategic Implementation: Socratic Logic Engine
 The LLM was not deployed as a standard assistant but was engineered with specific **System Logic Rules** to support university-level studies and personal technical development.
 * **Objective:** To facilitate deep learning in university and college studies.
@@ -42,7 +63,7 @@ The LLM was not deployed as a standard assistant but was engineered with specifi
 ---
 
 ## 🤖 Collaborative Development Disclosure
-This infrastructure was developed through an iterative, high-level technical collaboration with **Gemini (Google AI)**. The AI served as a Senior Systems Architect, providing theoretical guidance on Linux networking, security hardening protocols, and infrastructure roadmap planning, while I executed the deployment, performed hardware benchmarking, and conducted real-time troubleshooting of the network stack.
+This infrastructure was developed through an iterative, high-level technical collaboration with **Gemini (Google AI)**. The AI served as a Senior Systems Architect, providing theoretical guidance on Linux networking, infrastructure roadmap planning and github repo creating, while I executed the deployment, thought and configured the secuirty hardening protocols, performed hardware benchmarking, and conducted real-time troubleshooting of the network stack.
 
 ---
 
