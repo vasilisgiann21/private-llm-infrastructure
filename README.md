@@ -42,15 +42,18 @@ The following evidence verifies the successful implementation of the 5-layer "Se
 *Audit of internal socket binding, confirming the inference engine is not exposed to public NICs.*
 
 ### [02] Firewall Perimeter Configuration
-![UFW Status](./screenshots/ufw_status.png)
+![UFW Status](./screenshots/ufw_status.xcf)
+
 *Evidence of interface-specific ingress filtering via UFW, restricting access to the P2P tunnel.*
 
 ### [03] Intrusion Prevention (Fail2Ban)
 ![Fail2Ban Status](./screenshots/fail2ban_status.png)
+
 *Active monitoring of the SSH jail, verifying automated brute-force mitigation.*
 
 ### [04] Verified Secure Access
 ![Web UI Success](./screenshots/webui.png)
+
 *Successful end-to-end model inference accessed via the private network gateway.*
 
 ---
