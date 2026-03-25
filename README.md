@@ -42,7 +42,7 @@ The following evidence verifies the successful implementation of the 5-layer "Se
 *Audit of internal socket binding, confirming the inference engine is not exposed to public NICs.*
 
 ### [02] Firewall Perimeter Configuration
-![UFW Status](./screenshots/ufw_status.xcf)
+![UFW Status](./screenshots/ufw_status1.png)
 
 *Evidence of interface-specific ingress filtering via UFW, restricting access to the P2P tunnel.*
 
