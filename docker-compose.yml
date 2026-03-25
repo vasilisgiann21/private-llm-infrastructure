@@ -1,0 +1,24 @@
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    restart: always
+    # Security: Bind strictly to the private Tailscale IP to prevent public exposure
+    ports:
+      - "100.x.x.x:3000:8080" 
+    volumes:
+      - open-webui:/app/backend/data
+    environment:
+      - 'OLLAMA_BASE_URL=http://host.docker.internal:11434'
+      - 'WEBUI_SECRET_KEY=generate_a_secure_key_here'
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - ai-internal-mesh
+
+networks:
+  ai-internal-mesh:
+    driver: bridge
+
+volumes:
+  open-webui:
